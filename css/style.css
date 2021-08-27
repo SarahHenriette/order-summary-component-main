@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #e0e8ff;
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body h1, body p, body a {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.card {
+  background-color: white;
+  width: 450px;
+  height: 697px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+}
+.card-header {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.card-header img {
+  width: 100%;
+}
+.card-body h1 {
+  font-size: 28px;
+  color: #1f2f56;
+  text-align: center;
+  font-weight: 900;
+}
+.card-body .text, .card-body .infos {
+  margin: auto;
+}
+.card-body .text {
+  font-size: 12px;
+  width: 53%;
+  text-align: center;
+  line-height: 26px;
+  font-weight: 500;
+  color: #7280a7;
+}
+.card-body .infos {
+  width: 80%;
+  height: 98px;
+  background-color: #f5f7ff;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-body .infos p {
+  margin: 0;
+}
+.card-body .infos .annualPlan {
+  margin-left: -50px;
+}
+.card-body .infos .annualPlan span {
+  font-size: 16px;
+  color: #7280a7;
+}
+.card-body .infos .annualPlan span:first-child {
+  font-weight: 900;
+  color: #1f2f56;
+}
+.card-body .infos .change {
+  font-size: 14px;
+  color: #3829e0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.card-body .infos .change:hover {
+  text-decoration: none;
+  color: #7280a7;
+}
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+.card-footer button {
+  height: 50px;
+  width: 80%;
+  border: none;
+  background-color: #3829e0;
+  color: white;
+  border-radius: 11px;
+  margin: auto;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  font-weight: 900;
+  line-height: 20px;
+  cursor: pointer;
+}
+.card-footer button:hover {
+  filter: brightness(1.75);
+}
+.card-footer a {
+  text-align: center;
+  color: #7280a7;
+  margin-top: 32px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.card-footer a:hover {
+  color: #3829e0;
+}
+
+@media only screen and (max-width: 500px) and (min-width: 320px) {
+  .card {
+    width: 90%;
+    height: 567px;
+  }
+  .card-header {
+    height: 160px;
+  }
+  .card-body h1 {
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+  .card-body .text {
+    margin-top: 16px;
+    font-size: 15px;
+    width: 80%;
+  }
+  .card-body .infos {
+    height: 81px;
+  }
+  .card-body .infos .annualPlan {
+    margin-left: -20px;
+  }
+  .card-body .infos .annualPlan span {
+    font-size: 14px;
+  }
+  .card-footer {
+    margin-top: 24px;
+  }
+  .card-footer a {
+    margin-top: 24px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

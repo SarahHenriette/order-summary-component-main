@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+$font : 'Red Hat Display', sans-serif;
+//primary
+
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+
+//secondary 
+
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: $paleBlue;
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1, p, a {
+        font-family: $font;
+    }
+}
+
+.card {
+    background-color: white;
+    width: 450px;
+    height: 697px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+    &-header {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+        img {
+            width: 100%;
+        }
+    }
+    &-body {
+        h1 {
+            font-size: 28px;
+            color: $darkBlue;
+            text-align: center;
+            font-weight: 900;
+        }
+        .text, .infos {
+            margin: auto;
+        }
+        .text {
+            font-size: 12px;
+            width: 53%;
+            text-align: center;
+            line-height: 26px;
+            font-weight: 500;
+            color: $desaturatedBlue;
+
+        }
+        .infos {
+            width: 80%;
+            height: 98px;
+            background-color: $veryPaleBlue;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            p {
+                margin: 0;
+            }
+            .annualPlan {
+                margin-left: -50px;
+                span {
+                    font-size: 16px;
+                    color: $desaturatedBlue;
+                }
+                span:first-child {
+                    font-weight: 900;
+                    color: $darkBlue;
+                }
+            }
+            .change {
+                font-size: 14px;
+                color: $brightBlue;
+                text-decoration: underline;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: none;
+                    color: $desaturatedBlue;
+                }
+            }
+        }
+    }
+    &-footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+        button {
+            height: 50px;
+            width: 80%;
+            border: none;
+            background-color: $brightBlue;
+            color: white;
+            border-radius: 11px;
+            margin: auto;
+            box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+            font-weight: 900;
+            line-height: 20px;
+            cursor: pointer;
+            &:hover {
+                filter: brightness(1.75);
+            }
+        }
+        a {
+            text-align: center;
+            color: $desaturatedBlue;
+            margin-top: 32px;
+            font-weight: 900;
+            cursor: pointer;
+            &:hover {
+                color: $brightBlue;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 320px) {
+    .card {
+        width: 90%;
+        height: 567px;
+        &-header {
+            height: 160px;
+        }
+        &-body {
+            h1 {
+                margin-top: 32px;
+                margin-bottom: 0;
+            }
+            .text {
+                margin-top: 16px;
+                font-size: 15px;
+                width: 80%;
+            }
+            .infos {
+                height: 81px;
+                .annualPlan {
+                    margin-left: -20px;
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        &-footer {
+            margin-top: 24px;
+            a {
+                margin-top: 24px;
+            }
+        }
+    }
+}
